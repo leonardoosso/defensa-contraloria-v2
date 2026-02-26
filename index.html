@@ -926,6 +926,7 @@
 
   .arg-card--teal { border-left-color: var(--teal); }
   .arg-card--purple { border-left-color: var(--purple); }
+  .arg-card--amber { border-left-color: var(--amber); }
 
   .arg-card__header {
     display: flex;
@@ -947,6 +948,7 @@
   }
   .arg-card__num--teal { background: var(--teal-dim); color: var(--teal); }
   .arg-card__num--purple { background: var(--purple-dim); color: var(--purple); }
+  .arg-card__num--amber { background: var(--amber-dim); color: var(--amber); }
 
   .arg-card__title {
     font-family: var(--font-display);
@@ -1028,6 +1030,11 @@
     background: var(--purple-dim);
     color: var(--purple);
     border: 1px solid var(--purple);
+  }
+  .section-badge-header--amber {
+    background: var(--amber-dim);
+    color: var(--amber);
+    border: 1px solid var(--amber);
   }
   .section-badge-header--accent {
     background: var(--accent-dim);
@@ -1118,7 +1125,8 @@
     <a href="#s10">10. Proximos Pasos</a>
     <a href="#s11">11. Aseguradora</a>
     <a href="#s12">12. CSVH</a>
-    <a href="#s13">13. Convergencia</a>
+    <a href="#s13">13. Interventoria</a>
+    <a href="#s14">14. Convergencia</a>
   </nav>
 
   <div class="main">
@@ -2291,20 +2299,130 @@ mindmap
     </div>
 
 
-    <!-- ==================== SECCION 13 — CONVERGENCIA ==================== -->
-    <div id="s13" class="sec-head animate" style="--i:99">13 &mdash; Convergencia de Defensa</div>
+    <!-- ==================== SECCION 13 — INTERVENTORIA (CYC ANTIOQUIA) ==================== -->
+    <div id="s13" class="sec-head animate" style="--i:99">13 &mdash; Defensa de la Interventoria</div>
 
-    <div class="section-badge-header section-badge-header--accent animate" style="--i:100">
+    <div class="section-badge-header section-badge-header--amber animate" style="--i:100">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      Interventoria &mdash; Consorcio CYC Antioquia
+    </div>
+
+    <h2 class="animate" style="--i:101">Argumentos de la Interventoria</h2>
+    <p class="section-intro animate" style="--i:102">
+      El Consorcio CYC Antioquia (integrado por Cal y Mayor y Asociados S.C. y CPT S.A.) fue vinculado como presunto responsable fiscal por presuntas irregularidades en planeacion, ejecucion y seguimiento del Contrato de Obra No. 4600009284 de 2019. Su apoderado, Jose Ignacio Leiva Gonzalez, presenta 8 argumentos centrados en demostrar que no existe dano patrimonial al Estado y que las obras fueron completadas satisfactoriamente mediante el Contrato Nuevo.
+    </p>
+
+    <div class="arg-cards-grid">
+
+      <div class="arg-card arg-card--amber" style="--i:103">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--amber">Arg 1</span>
+          <span class="arg-card__title">Ejecucion fisica superior a ejecucion financiera</span>
+          <span class="arg-card__tipo tipo-tecnico">Tecnico</span>
+        </div>
+        <p class="arg-card__desc">El informe tecnico acredita que la ejecucion fisica del contrato fue mayor que la financiera, demostrando que al contratista solo se le pago por obras realmente ejecutadas, e incluso se le pago menos.</p>
+        <blockquote>&ldquo;El informe acredita que la ejecucion fisica del Contrato de Obra fue superior a la ejecucion financiera, lo cual quiere decir que al contratista de obra solo se le pagaron las obras real y efectivamente ejecutadas, e, inclusive, se le pago menos de lo que ejecuto.&rdquo;</blockquote>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> Refuta el cargo de pagos indebidos. Si se pago menos de lo ejecutado, no hay sobrepago ni dano patrimonial.</div>
+      </div>
+
+      <div class="arg-card arg-card--amber" style="--i:104">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--amber">Arg 2</span>
+          <span class="arg-card__title">Nunca se autorizaron pagos por obras no ejecutadas</span>
+          <span class="arg-card__tipo tipo-tecnico">Tecnico</span>
+        </div>
+        <p class="arg-card__desc">El interventor (CYC) no autorizo ningun pago por obras que no se hubieran ejecutado.</p>
+        <blockquote>&ldquo;El informe acredita que en ningun momento el Consorcio CYC autorizo pagos por obras no ejecutadas, por lo cual no se puede entender por configurado dano patrimonial alguno al Estado por el actuar del Interventor.&rdquo;</blockquote>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> Desvincula al interventor de responsabilidad fiscal directa por el mecanismo de pago.</div>
+      </div>
+
+      <div class="arg-card arg-card--amber" style="--i:105">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--amber">Arg 3</span>
+          <span class="arg-card__title">No hubo pagos por reprocesos</span>
+          <span class="arg-card__tipo tipo-tecnico">Tecnico</span>
+        </div>
+        <p class="arg-card__desc">No se pagaron cantidades de obra que fueran contratadas y pagadas nuevamente para terminar la obra.</p>
+        <blockquote>&ldquo;El informe acredita que no se realizaron pagos por reprocesos, es decir, no se hicieron cantidades de obras que fueran contratadas y pagadas nuevamente para terminar la obra.&rdquo;</blockquote>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> Refuta la posibilidad de doble pago o sobrecostos por repeticion de obra.</div>
+      </div>
+
+      <div class="arg-card arg-card--amber" style="--i:106">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--amber">Arg 4</span>
+          <span class="arg-card__title">Obras ejecutadas fueron funcionales y operativas</span>
+          <span class="arg-card__tipo tipo-tecnico">Tecnico</span>
+        </div>
+        <p class="arg-card__desc">Las obras ejecutadas bajo el contrato original cumplieron requisitos de rehabilitacion y necesidades de estudios previos.</p>
+        <blockquote>&ldquo;Las obras ejecutadas en el Contrato de Obra fueron funcionales y operativas, cumpliendo con los requerimientos de un proyecto de rehabilitacion y con las necesidades establecidas en los estudios previos.&rdquo;</blockquote>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> Refuta directamente el cargo de &ldquo;no funcionalidad de las obras ejecutadas&rdquo;.</div>
+      </div>
+
+      <div class="arg-card arg-card--amber" style="--i:107">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--amber">Arg 5</span>
+          <span class="arg-card__title">Obras inconclusas terminadas por Contrato Nuevo &mdash; no hay dano actual</span>
+          <span class="arg-card__tipo tipo-mixto">Juridico/Tecnico</span>
+        </div>
+        <p class="arg-card__desc">Las obras que quedaron inconclusas bajo el contrato original fueron terminadas mediante el Contrato Nuevo (No. 4600015774 de 2023), cumpliendo especificaciones tecnicas.</p>
+        <blockquote>&ldquo;respecto de las obras que fueron ejecutadas pero que no fueron concluidas en su totalidad no existe actualmente dano patrimonial alguno, toda vez que solo se pagaron las obras que fueron efectivamente ejecutadas y, mediante la ejecucion del Contrato Nuevo, las obras que estaban inconclusas fueron terminadas, cumpliendo con las especificaciones tecnicas correspondientes.&rdquo;</blockquote>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> Argumento de resarcimiento/subsanacion del supuesto dano. Si la obra esta completa y funcional, no persiste el dano.</div>
+      </div>
+
+      <div class="arg-card arg-card--amber" style="--i:108">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--amber">Arg 6</span>
+          <span class="arg-card__title">Ahorro neto para el Estado &mdash; $2,731M</span>
+          <span class="arg-card__tipo tipo-economico">Economico</span>
+        </div>
+        <p class="arg-card__desc">El valor que quedo sin ejecutar del contrato original ($5,711M) es muy superior al valor pagado al nuevo contratista por los mismos items ($2,980M), generando un ahorro de $2,731M para la entidad.</p>
+        <blockquote>&ldquo;La diferencia entre lo que no se le pago al contratista de obra por las obras pendientes de ejecutar ($5.711.888.720,96) y lo que se le termino pagando al nuevo contratista por esos mismos items ($2.980.115.480,02) da como resultado un ahorro o un menor costo para la entidad&rdquo;</blockquote>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> Argumento numerico central. Ahorro neto de $2,731,773,240.94 demuestra que no hay detrimento patrimonial.</div>
+      </div>
+
+      <div class="arg-card arg-card--amber" style="--i:109">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--amber">Arg 7</span>
+          <span class="arg-card__title">&ldquo;Mayor valor&rdquo; del Contrato Nuevo corresponde a actividades nuevas</span>
+          <span class="arg-card__tipo tipo-economico">Economico</span>
+        </div>
+        <p class="arg-card__desc">La diferencia entre el valor total del Contrato Nuevo ($8,063M) y lo pagado por items identicos ($2,980M) corresponde a actividades NO contempladas en el contrato original o con especificaciones distintas, no a reprocesos.</p>
+        <blockquote>&ldquo;el otro valor pagado al nuevo contratista bajo el Contrato Nuevo ($8.063.929.884,00 - 2.980.115.480,02 = $5.083.814.403,98) corresponde a (i) actividades NO contempladas en el Contrato de Obra; y (ii) actividades con especificaciones distintas a las contempladas en el Contrato de Obra.&rdquo;</blockquote>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> Explica el aparente &ldquo;mayor costo&rdquo; del Contrato Nuevo. $5,083M son alcance adicional, no sobrecosto.</div>
+      </div>
+
+      <div class="arg-card arg-card--amber" style="--i:110">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--amber">Arg 8</span>
+          <span class="arg-card__title">Solicitud de archivo &mdash; ausencia de dano y de conducta dolosa</span>
+          <span class="arg-card__tipo tipo-juridico">Juridico</span>
+        </div>
+        <p class="arg-card__desc">Solicita archivo del proceso con base en Ley 610 de 2000 (arts. 16 y 47) por: (a) ausencia de dano patrimonial al Estado y (b) ausencia de conducta dolosa o gravemente culposa del interventor.</p>
+        <blockquote>&ldquo;procederá el archivo del expediente cuando se establezca que [...] se demuestre que el hecho no existió o que no es constitutivo de dano patrimonial al Estado o no comporta el ejercicio de gestion fiscal, o se acredite la operancia de una causal eximente de responsabilidad fiscal o aparezca demostrado que el dano investigado ha sido resarcido totalmente.&rdquo;</blockquote>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> Fundamentacion legal para cerrar el proceso. Combina la demostracion tecnica (no hay dano) con el marco juridico (causales de archivo, Ley 610/2000).</div>
+      </div>
+
+    </div>
+
+    <div class="callout animate" style="--i:111">
+      <strong>Solicitud de archivo.</strong> El interventor solicita el archivo del proceso de responsabilidad fiscal por ausencia de dano patrimonial al Estado (el Contrato Nuevo termino las obras por menor valor) y ausencia de conducta dolosa o gravemente culposa (solo se pagaron obras efectivamente ejecutadas, sin reprocesos ni pagos indebidos).
+    </div>
+
+
+    <!-- ==================== SECCION 14 — CONVERGENCIA ==================== -->
+    <div id="s14" class="sec-head animate" style="--i:112">14 &mdash; Convergencia de Defensa</div>
+
+    <div class="section-badge-header section-badge-header--accent animate" style="--i:113">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
       Convergencia &mdash; Argumentos Comunes
     </div>
 
-    <h2 class="animate" style="--i:101">Puntos de Convergencia entre las Tres Defensas</h2>
-    <p class="section-intro animate" style="--i:102">
-      Las defensas de la Aseguradora, el CSVH y el Analisis Estrategico V2 convergen en una conclusion central: <strong>NO hay dano patrimonial real imputable</strong>. El siguiente diagrama muestra los argumentos compartidos entre las tres partes.
+    <h2 class="animate" style="--i:114">Puntos de Convergencia entre las Cuatro Defensas</h2>
+    <p class="section-intro animate" style="--i:115">
+      Las defensas de la Aseguradora, el CSVH, la Interventoria (CYC) y el Analisis Estrategico V2 convergen en una conclusion central: <strong>NO hay dano patrimonial real imputable</strong>. El siguiente diagrama muestra los argumentos compartidos entre las cuatro partes.
     </p>
 
-    <div class="mermaid-wrap animate" style="--i:103">
+    <div class="mermaid-wrap animate" style="--i:116">
       <div class="zoom-controls">
         <button onclick="zoomDiagram(this, 1.2)" title="Zoom in">+</button>
         <button onclick="zoomDiagram(this, 0.8)" title="Zoom out">&minus;</button>
@@ -2327,6 +2445,12 @@ mindmap
               Prorroga negada
               Saldo +$5,536M a favor
               Ajeno al Cto 774
+            Interventoria CYC
+              Ejecucion fisica mayor que financiera
+              Solo se pago obra ejecutada
+              No hubo reprocesos
+              Ahorro neto $2,731M
+              Obras funcionales y operativas
             Analisis V2
               CGR acepta 84.7% no es sobrecosto
               Balance +$8,362M a favor
@@ -2335,10 +2459,10 @@ mindmap
       </pre>
     </div>
 
-    <!-- Tabla comparativa 3 columnas -->
-    <h3 class="animate" style="--i:104; font-family: var(--font-display); font-size: 22px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.3px;">Tabla Comparativa: Tres Posiciones</h3>
+    <!-- Tabla comparativa 4 columnas -->
+    <h3 class="animate" style="--i:117; font-family: var(--font-display); font-size: 22px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.3px;">Tabla Comparativa: Cuatro Posiciones</h3>
 
-    <div class="table-wrap animate" style="--i:105">
+    <div class="table-wrap animate" style="--i:118">
       <div class="table-scroll">
         <table class="data-table">
           <thead>
@@ -2346,6 +2470,7 @@ mindmap
               <th>Linea de Defensa</th>
               <th>Aseguradora</th>
               <th>CSVH</th>
+              <th>Interventoria</th>
               <th>Analisis V2</th>
             </tr>
           </thead>
@@ -2354,45 +2479,58 @@ mindmap
               <td><strong>Items no comparables</strong></td>
               <td>Items no identicos entre Cto 284 y 774</td>
               <td>~10 items con specs diferentes, reduce sobrecosto 82%</td>
+              <td>$5,083M del Cto Nuevo son actividades nuevas o con specs distintas</td>
               <td>CGR acepta: $4,605M por cambio specs no son comparables</td>
             </tr>
             <tr style="--i:1">
               <td><strong>Actividades nuevas</strong></td>
               <td>$478M en mantenimiento y obras no previstas</td>
               <td>CGR reconoce necesidad. $478.5M no imputable</td>
+              <td>Contrato Nuevo incluye actividades NO contempladas en Cto de Obra</td>
               <td>$478M declarados indispensables por la CGR</td>
             </tr>
             <tr style="--i:2">
               <td><strong>Inflacion / precios</strong></td>
               <td>Inflacion 2019-2023 justifica mayor valor ($3,412M)</td>
               <td>VU del Cto 774 fijados por Gobernacion, no por CSVH</td>
+              <td>Mismos items costaron $2,980M vs $5,711M no ejecutados: ahorro neto</td>
               <td>$1,236M explicable por actualizacion de precios</td>
             </tr>
             <tr style="--i:3">
               <td><strong>Balance economico</strong></td>
               <td>Saldo entidad $5,711M supera dano de $1,236M</td>
               <td>Saldo +$5,536M a favor del CSVH</td>
+              <td>Ahorro neto $2,731M para la entidad</td>
               <td>Saldo neto +$8,362M a favor</td>
             </tr>
             <tr style="--i:4">
               <td><strong>Argumento eliminatorio</strong></td>
               <td>Poliza no cubre cambios de especificaciones</td>
               <td>CSVH no es gestor fiscal &rarr; archivar</td>
+              <td>No hay dano + Ley 610 art. 16 &rarr; archivar</td>
               <td>Argumento juridico no refutado + V2 reduce 84.7%</td>
             </tr>
             <tr style="--i:5">
               <td><strong>Exposicion residual</strong></td>
               <td>Danos reales: solo $4.8M (99.98% menos)</td>
               <td>Mayor valor real: $175M (vs $8,063M de CGR)</td>
+              <td>$0 &mdash; dano resarcido totalmente por Contrato Nuevo</td>
               <td>$1,236M comparable, cubierto por inflacion</td>
+            </tr>
+            <tr style="--i:6">
+              <td><strong>Funcionalidad de obras</strong></td>
+              <td>Obras SI son funcionalmente operativas</td>
+              <td>&mdash;</td>
+              <td>Obras funcionales y operativas, cumplieron estudios previos</td>
+              <td>&mdash;</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
 
-    <div class="callout animate" style="--i:106">
-      <strong>Convergencia clave.</strong> Las tres defensas coinciden en que: (1) los items comparados no son equivalentes, (2) las actividades nuevas eran necesarias y no imputables, (3) el mayor valor se explica por inflacion y decisiones de la entidad, y (4) el balance economico favorece ampliamente al contratista. La defensa coordinada cubre tanto el frente juridico (proceso improcedente) como el economico (no hay detrimento real).
+    <div class="callout animate" style="--i:119">
+      <strong>Convergencia clave.</strong> Las cuatro defensas coinciden en que: (1) los items comparados no son equivalentes, (2) las actividades nuevas eran necesarias y no imputables, (3) el mayor valor se explica por inflacion, alcance adicional y decisiones de la entidad, y (4) el balance economico favorece ampliamente al contratista. La interventoria refuerza con datos concretos: ejecucion fisica superior a financiera, cero reprocesos, y un ahorro neto de $2,731M. La defensa coordinada cubre tanto el frente juridico (proceso improcedente) como el economico (no hay detrimento real).
     </div>
 
   </div><!-- /main -->
