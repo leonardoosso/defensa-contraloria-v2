@@ -927,6 +927,8 @@
   .arg-card--teal { border-left-color: var(--teal); }
   .arg-card--purple { border-left-color: var(--purple); }
   .arg-card--amber { border-left-color: var(--amber); }
+  .arg-card--green { border-left-color: var(--green); }
+  .arg-card--blue { border-left-color: var(--blue); }
 
   .arg-card__header {
     display: flex;
@@ -949,6 +951,8 @@
   .arg-card__num--teal { background: var(--teal-dim); color: var(--teal); }
   .arg-card__num--purple { background: var(--purple-dim); color: var(--purple); }
   .arg-card__num--amber { background: var(--amber-dim); color: var(--amber); }
+  .arg-card__num--green { background: var(--green-dim); color: var(--green); }
+  .arg-card__num--blue { background: var(--blue-dim); color: var(--blue); }
 
   .arg-card__title {
     font-family: var(--font-display);
@@ -973,6 +977,8 @@
   .tipo-juridico { background: var(--amber-dim); color: var(--amber); }
   .tipo-economico { background: var(--green-dim); color: var(--green); }
   .tipo-mixto { background: var(--purple-dim); color: var(--purple); }
+  .tipo-financiero { background: var(--teal-dim); color: var(--teal); }
+  .tipo-estrategico { background: var(--accent-dim); color: var(--accent); }
 
   .arg-card__desc {
     font-size: 15px;
@@ -1008,6 +1014,35 @@
     border-color: color-mix(in srgb, var(--border) 50%, var(--purple) 50%);
   }
 
+  /* S15 Waterfall chart */
+  .waterfall { margin: 24px 0; }
+  .waterfall__title { font-family: var(--font-display); font-size: 18px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.3px; }
+  .waterfall__bar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 16px; margin-bottom: 6px; border-radius: 8px;
+    background: var(--surface); border: 1px solid var(--border);
+    position: relative; overflow: hidden; min-height: 44px;
+  }
+  .waterfall__bar::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: var(--w); background: var(--bar-color); opacity: 0.18;
+    border-radius: 8px; transition: width 0.6s ease;
+  }
+  .waterfall__label { font-family: var(--font-mono); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; z-index: 1; }
+  .waterfall__value { font-family: var(--font-mono); font-size: 14px; font-weight: 700; z-index: 1; }
+  .waterfall__bar--result { border: 2px solid var(--green); background: var(--green-dim); }
+  .veredicto--green { background: var(--green-dim); border: 1px solid var(--green); }
+  .veredicto--green .veredicto__text { color: var(--green); }
+
+  /* S16 plan tables */
+  .plan-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+  .plan-table th { font-family: var(--font-mono); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 10px 12px; border-bottom: 2px solid var(--border); text-align: left; color: var(--text-dim); }
+  .plan-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .plan-table tr:hover { background: var(--surface2); }
+  .plan-table .total-row { font-weight: 700; border-top: 2px solid var(--text-dim); }
+  .plan-table .fuerza-alta { color: var(--green); font-weight: 700; font-family: var(--font-mono); font-size: 11px; }
+  .plan-table .fuerza-media { color: var(--amber); font-weight: 600; font-family: var(--font-mono); font-size: 11px; }
+
   .section-badge-header {
     display: inline-flex;
     align-items: center;
@@ -1040,6 +1075,16 @@
     background: var(--accent-dim);
     color: var(--accent);
     border: 1px solid var(--accent);
+  }
+  .section-badge-header--green {
+    background: var(--green-dim);
+    color: var(--green);
+    border: 1px solid var(--green);
+  }
+  .section-badge-header--blue {
+    background: var(--blue-dim);
+    color: var(--blue);
+    border: 1px solid var(--blue);
   }
 
   /* ============ RESPONSIVE ============ */
@@ -1127,6 +1172,8 @@
     <a href="#s12">12. CSVH</a>
     <a href="#s13">13. Interventoria</a>
     <a href="#s14">14. Convergencia</a>
+    <a href="#s15">15. Respuesta Preliminar</a>
+    <a href="#s16">16. Plan del Aporte</a>
   </nav>
 
   <div class="main">
@@ -2532,6 +2579,457 @@ mindmap
     <div class="callout animate" style="--i:119">
       <strong>Convergencia clave.</strong> Las cuatro defensas coinciden en que: (1) los items comparados no son equivalentes, (2) las actividades nuevas eran necesarias y no imputables, (3) el mayor valor se explica por inflacion, alcance adicional y decisiones de la entidad, y (4) el balance economico favorece ampliamente al contratista. La interventoria refuerza con datos concretos: ejecucion fisica superior a financiera, cero reprocesos, y un ahorro neto de $2,731M. La defensa coordinada cubre tanto el frente juridico (proceso improcedente) como el economico (no hay detrimento real).
     </div>
+
+    <!-- ==================== SECCION 15 — RESPUESTA PRELIMINAR ==================== -->
+    <div id="s15" class="sec-head animate" style="--i:120">15 &mdash; Respuesta Preliminar a la Contraloria</div>
+
+    <div class="section-badge-header section-badge-header--green animate" style="--i:121">Resultado: Detrimento Resarcido Totalmente</div>
+
+    <div class="kpi-row">
+      <div class="kpi-card animate-scale" style="--i:122">
+        <div class="kpi-card__value" style="color:var(--green)">$0</div>
+        <div class="kpi-card__label">Detrimento Real</div>
+        <span class="kpi-card__badge badge-green">Resarcido</span>
+      </div>
+      <div class="kpi-card animate-scale" style="--i:123">
+        <div class="kpi-card__value" style="color:var(--green)">$1,243M</div>
+        <div class="kpi-card__label">Recuperado via Conciliacion</div>
+      </div>
+      <div class="kpi-card animate-scale" style="--i:124">
+        <div class="kpi-card__value" style="color:var(--green)">+$7.17M</div>
+        <div class="kpi-card__label">Excedente a Favor</div>
+      </div>
+      <div class="kpi-card animate-scale" style="--i:125">
+        <div class="kpi-card__value" style="color:var(--green)">94.7%</div>
+        <div class="kpi-card__label">Reduccion del Dano Alegado</div>
+      </div>
+    </div>
+
+    <div class="waterfall animate" style="--i:126">
+      <div class="waterfall__title">Evolucion del Dano Alegado por la Contraloria</div>
+      <div class="waterfall__bar" style="--w:100%;--bar-color:var(--red)">
+        <span class="waterfall__label">V0 (Abr 2024)</span>
+        <span class="waterfall__value">$23,202M</span>
+      </div>
+      <div class="waterfall__bar" style="--w:12.8%;--bar-color:var(--amber)">
+        <span class="waterfall__label">V1 (May 2024)</span>
+        <span class="waterfall__value">$2,981M</span>
+      </div>
+      <div class="waterfall__bar" style="--w:5.3%;--bar-color:var(--amber)">
+        <span class="waterfall__label">V2 (Nov 2025)</span>
+        <span class="waterfall__value">$1,236M</span>
+      </div>
+      <div class="waterfall__bar" style="--w:5.4%;--bar-color:var(--green)">
+        <span class="waterfall__label">Conciliacion SIF 2025</span>
+        <span class="waterfall__value" style="color:var(--green)">&minus;$1,243M</span>
+      </div>
+      <div class="waterfall__bar waterfall__bar--result" style="--w:0.03%;--bar-color:var(--green)">
+        <span class="waterfall__label">Resultado Neto</span>
+        <span class="waterfall__value" style="color:var(--green);font-weight:700">$0 (Excedente: +$7.17M)</span>
+      </div>
+    </div>
+
+    <h2 class="animate" style="--i:127">Descomposicion del Contrato 774 (Tabla 17 de V2)</h2>
+    <p class="section-intro animate" style="--i:128">El informe V2 de la Contraloria descompone el Contrato 774 en 4 componentes. Solo el 15% es directamente comparable en precios unitarios.</p>
+
+    <div class="table-wrap animate" style="--i:129">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Componente</th>
+              <th>Descripcion</th>
+              <th class="num">Valor</th>
+              <th class="num">% del Cto 774</th>
+              <th>Comparable?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="--i:1">
+              <td><strong>H</strong></td>
+              <td>Mayor valor unitario &mdash; items completamente similares (22 items)</td>
+              <td class="num">$1,236,658,993</td>
+              <td class="num">15%</td>
+              <td><span class="status status--red">Unico comparable</span></td>
+            </tr>
+            <tr style="--i:2">
+              <td><strong>F</strong></td>
+              <td>Cantidades a precios del Cto 284 &mdash; items similares</td>
+              <td class="num">$1,743,456,486</td>
+              <td class="num">22%</td>
+              <td><span class="status status--parcial">Parcialmente similar</span></td>
+            </tr>
+            <tr style="--i:3">
+              <td><strong>I</strong></td>
+              <td>Actividades con cambio de especificaciones (12 items)</td>
+              <td class="num">$4,605,210,536</td>
+              <td class="num">57%</td>
+              <td><span class="status status--vigente">NO comparable</span></td>
+            </tr>
+            <tr style="--i:4">
+              <td><strong>C</strong></td>
+              <td>Actividades NO contempladas en Cto 284</td>
+              <td class="num">$478,592,535</td>
+              <td class="num">6%</td>
+              <td><span class="status status--vigente">NO comparable</span></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2"><strong>Total Contrato 774</strong></td>
+              <td class="num">$8,063,929,884</td>
+              <td class="num">100%</td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <h2 class="animate" style="--i:130">Argumentos de la Respuesta</h2>
+
+    <div class="arg-cards-grid">
+
+      <div class="arg-card arg-card--green animate" style="--i:131">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--green">ARG-RESP-01</span>
+          <span class="arg-card__title">Evolucion del dano alegado &mdash; reduccion progresiva por la propia Contraloria</span>
+          <span class="arg-card__tipo tipo-financiero">Tecnico/Financiero</span>
+        </div>
+        <p class="arg-card__desc">El propio equipo tecnico de la CGR ha refinado progresivamente el alcance del dano a traves de tres versiones de su informe, reduciendolo en un 94.7%.</p>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> La progresiva reduccion demuestra que el dano alegado fue inicialmente sobredimensionado y que al aplicar criterios tecnicos rigurosos, se reduce drasticamente: de $23,202M a $1,236M.</div>
+      </div>
+
+      <div class="arg-card arg-card--green animate" style="--i:132">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--green">ARG-RESP-02</span>
+          <span class="arg-card__title">Solo el 15% del Contrato 774 corresponde a &ldquo;mayor valor&rdquo; comparable</span>
+          <span class="arg-card__tipo tipo-tecnico">Tecnico</span>
+        </div>
+        <p class="arg-card__desc">La Tabla 17 del informe V2 descompone el Cto 774 ($8,063M) en 4 componentes. Solo el componente H ($1,236M, 15%) corresponde a items completamente similares donde se puede calcular un &ldquo;mayor valor unitario&rdquo;. El 85% restante NO es directamente comparable.</p>
+        <blockquote>&ldquo;Las actividades se clasificaron en: items completamente similares (22 items), items con cambio en especificaciones (12 items), y actividades no contempladas en el contrato original.&rdquo;</blockquote>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> El presunto dano se limita a un 15% del contrato, no a su totalidad.</div>
+      </div>
+
+      <div class="arg-card arg-card--green animate" style="--i:133">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--green">ARG-RESP-03</span>
+          <span class="arg-card__title">El 57% del Contrato 774 son actividades con cambio de especificaciones &mdash; NO comparables</span>
+          <span class="arg-card__tipo tipo-tecnico">Tecnico</span>
+        </div>
+        <p class="arg-card__desc">$4,605,210,536 (57% del Cto 774) corresponde a actividades con especificaciones distintas a las del Contrato de Obra original. Estas actividades no pueden compararse en precios unitarios porque son tecnica y materialmente diferentes.</p>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> Mas de la mitad del contrato nuevo no es comparable con el original, invalidando cualquier calculo de &ldquo;sobrecosto&rdquo; sobre esas actividades.</div>
+      </div>
+
+      <div class="arg-card arg-card--green animate" style="--i:134">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--green">ARG-RESP-04</span>
+          <span class="arg-card__title">El 6% son actividades nuevas necesarias para completar la obra</span>
+          <span class="arg-card__tipo tipo-tecnico">Tecnico</span>
+        </div>
+        <p class="arg-card__desc">$478,592,535 (6% del Cto 774) corresponde a actividades NO contempladas en el Contrato de Obra original, que fueron necesarias para completar y dar funcionalidad a la obra.</p>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> Estas actividades no pueden constituir sobrecosto porque nunca existieron en el contrato original. Son obra nueva necesaria.</div>
+      </div>
+
+      <div class="arg-card arg-card--green animate" style="--i:135">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--green">ARG-RESP-05</span>
+          <span class="arg-card__title">La conciliacion SIF 2025 recupero $1,243M &mdash; superando el mayor valor alegado</span>
+          <span class="arg-card__tipo tipo-financiero">Financiero/Juridico</span>
+        </div>
+        <p class="arg-card__desc">Mediante el Acuerdo Conciliatorio SIF 2025, el Departamento de Antioquia ya recupero $1,243,833,815 en descuentos directos al contratista del Cto 774. Esta cifra SUPERA los $1,236,658,993 que el informe V2 identifica como &ldquo;mayor valor&rdquo; en items completamente similares.</p>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> ARGUMENTO CENTRAL. Si el dano ya fue recuperado con excedente de $7,174,821, no existe detrimento patrimonial.</div>
+      </div>
+
+      <div class="arg-card arg-card--green animate" style="--i:136">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--green">ARG-RESP-06</span>
+          <span class="arg-card__title">Renuncia a intereses &mdash; beneficio adicional no cuantificado</span>
+          <span class="arg-card__tipo tipo-financiero">Financiero</span>
+        </div>
+        <p class="arg-card__desc">En el Acuerdo Sexto de la conciliacion, el Consorcio renuncia expresamente a TODOS los intereses causados sobre las 4 actas pendientes de pago. El monto base de las actas es aproximadamente $2,661M y los intereses cubren un periodo de aproximadamente 4 anos.</p>
+        <blockquote>&ldquo;El Consorcio renuncia a los intereses moratorios causados sobre las actas 6, 7, 8 y 9 del Contrato de Obra.&rdquo;</blockquote>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> Beneficio adicional significativo para la entidad que no esta cuantificado pero que incrementa aun mas el resarcimiento real.</div>
+      </div>
+
+      <div class="arg-card arg-card--green animate" style="--i:137">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--green">ARG-RESP-07</span>
+          <span class="arg-card__title">Indices ICCP/ICOCIV justifican parte del aumento de precios unitarios</span>
+          <span class="arg-card__tipo tipo-tecnico">Tecnico</span>
+        </div>
+        <p class="arg-card__desc">Los boletines oficiales del DANE muestran que los costos de construccion aumentaron significativamente entre 2019 (fecha del Cto 284) y 2023 (fecha del Cto 774). ICCP: 3.47% (2019), 5.01% (2020), 3.78% (2021), ICOCIV: 9.73% (2022). Acumulado ~23.73%.</p>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> Una porcion significativa del &ldquo;mayor valor unitario&rdquo; se explica por la inflacion oficial de costos de construccion, no por sobrecostos indebidos.</div>
+      </div>
+
+      <div class="arg-card arg-card--green animate" style="--i:138">
+        <div class="arg-card__header">
+          <span class="arg-card__num arg-card__num--green">ARG-RESP-08</span>
+          <span class="arg-card__title">Visita tecnica confirma que las obras son funcionales y operativas</span>
+          <span class="arg-card__tipo tipo-tecnico">Tecnico</span>
+        </div>
+        <p class="arg-card__desc">La visita tecnica de febrero-marzo 2024 (Anexo 1 del informe V2) documento 144 obras complementarias. La gran mayoria fue calificada como BUENO en estructura y funcionalidad. Solo 2 excepciones puntuales.</p>
+        <div class="arg-card__impacto"><strong>Impacto:</strong> Refuta el cargo de no funcionalidad. Las obras estan en servicio y operativas. 144 obras inventariadas, calificacion mayoritaria BUENO.</div>
+      </div>
+
+    </div><!-- /arg-cards-grid -->
+
+    <!-- Hero callout: Killer argument -->
+    <div class="veredicto veredicto--green animate" style="--i:139">
+      <div class="veredicto__text">$1,243,833,815 recuperados &gt; $1,236,658,993 de dano alegado</div>
+      <div class="veredicto__sub">Excedente a favor de la entidad: +$7,174,821 &mdash; El detrimento investigado ha sido resarcido totalmente</div>
+    </div>
+
+    <!-- Detalle de la indemnizacion ($520M) -->
+    <details class="args-group animate" style="--i:140">
+      <summary>Detalle de la indemnizacion por sobrecostos ($520M) &mdash; 6 actividades <span class="args-count">6 items</span></summary>
+      <div class="args-body">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Actividad</th>
+              <th class="num">Costo 2023 (Cto Nuevo)</th>
+              <th class="num">Costo 2019 (Cto 284)</th>
+              <th class="num">Diferencia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="--i:1">
+              <td>Filtros</td>
+              <td class="num">$113,603,624</td>
+              <td class="num">$51,040,916</td>
+              <td class="num" style="color:var(--red)">+$62,562,708</td>
+            </tr>
+            <tr style="--i:2">
+              <td>Cunetas</td>
+              <td class="num">$290,083,085</td>
+              <td class="num">$131,837,465</td>
+              <td class="num" style="color:var(--red)">+$158,245,620</td>
+            </tr>
+            <tr style="--i:3">
+              <td>Box culverts</td>
+              <td class="num">$69,762,863</td>
+              <td class="num">$78,389,912</td>
+              <td class="num" style="color:var(--green)">&minus;$8,627,049</td>
+            </tr>
+            <tr style="--i:4">
+              <td>Ponton</td>
+              <td class="num">$92,190,635</td>
+              <td class="num">$38,835,583</td>
+              <td class="num" style="color:var(--red)">+$53,355,052</td>
+            </tr>
+            <tr style="--i:5">
+              <td>Puente La Aguada</td>
+              <td class="num">$202,682,287</td>
+              <td class="num">$72,051,351</td>
+              <td class="num" style="color:var(--red)">+$130,630,936</td>
+            </tr>
+            <tr style="--i:6">
+              <td>Muros aprox. La Aguada</td>
+              <td class="num">$146,211,134</td>
+              <td class="num">$22,280,265</td>
+              <td class="num" style="color:var(--red)">+$123,930,869</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td><strong>Total</strong></td>
+              <td class="num">$914,533,628</td>
+              <td class="num">$394,435,492</td>
+              <td class="num" style="color:var(--red)"><strong>$520,098,136</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </details>
+
+    <!-- Legal callout: Art. 16 Ley 610/2000 -->
+    <div class="callout animate" style="--i:141; border-left-color: var(--green);">
+      <strong>Art. 16, Ley 610 de 2000 &mdash; Causal de archivo.</strong>
+      <blockquote style="background:var(--green-dim); border-left-color:var(--green); margin-top:10px;">&ldquo;Procedera el archivo del expediente cuando se establezca que [&hellip;] se demuestre que el hecho no existio o que no es constitutivo de dano patrimonial al Estado o no comporta el ejercicio de gestion fiscal, o se acredite la operancia de una causal eximente de responsabilidad fiscal o aparezca demostrado que el dano investigado ha sido resarcido totalmente.&rdquo;</blockquote>
+      La conciliacion SIF 2025 demuestra resarcimiento total con excedente de $7.17M. Procede el archivo del proceso fiscal.
+    </div>
+
+    <!-- Convergencia callout -->
+    <div class="callout animate" style="--i:142; border-left-color: var(--green);">
+      <strong>Convergencia con defensas previas (S11&ndash;S14).</strong> Los argumentos de esta respuesta preliminar convergen con las cuatro lineas de defensa documentadas en las secciones anteriores: la Aseguradora (S11), el CSVH (S12), la Interventoria (S13) y el analisis de convergencia (S14). Cinco partes procesales independientes llegan a la misma conclusion: no hay detrimento patrimonial, las obras son funcionales, y la entidad se beneficio economicamente del acuerdo conciliatorio.
+    </div>
+
+
+    <!-- ==================== SECCION 16 — PLAN DEL APORTE ==================== -->
+    <div id="s16" class="sec-head animate" style="--i:143">16 &mdash; Plan del Aporte &mdash; Estructura de la Respuesta Formal</div>
+
+    <div class="section-badge-header section-badge-header--blue animate" style="--i:144">Planificacion del Documento de Respuesta</div>
+
+    <h2 class="animate" style="--i:145">Presupuesto de Paginas</h2>
+    <p class="section-intro animate" style="--i:146">Estructura propuesta para la respuesta formal al proceso de responsabilidad fiscal. Documento conciso, contundente y basado en evidencia de la propia CGR.</p>
+
+    <div class="table-wrap animate" style="--i:147">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Seccion</th>
+              <th class="num">Paginas</th>
+              <th class="wide">Contenido Clave</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="--i:1">
+              <td><strong>I. Encabezado y Contexto</strong></td>
+              <td class="num">1</td>
+              <td>Identificacion del proceso, partes, referencia a OF0224-V2</td>
+            </tr>
+            <tr style="--i:2">
+              <td><strong>II. Evolucion del Dano Alegado</strong></td>
+              <td class="num">2</td>
+              <td>Tabla comparativa V0 &rarr; V1 &rarr; V2, reduccion progresiva del 94.7%</td>
+            </tr>
+            <tr style="--i:3">
+              <td><strong>III. Analisis Tecnico V2</strong></td>
+              <td class="num">3</td>
+              <td>Descomposicion Tabla 17, items similares vs cambio de especificaciones</td>
+            </tr>
+            <tr style="--i:4">
+              <td><strong>IV. Acuerdo Conciliatorio</strong></td>
+              <td class="num">2</td>
+              <td>Cifras de recuperacion, renuncia a intereses, 20 demandas laborales terminadas</td>
+            </tr>
+            <tr style="--i:5">
+              <td><strong>V. Argumento Central: Resarcimiento Total</strong></td>
+              <td class="num">1</td>
+              <td>$1,243M &gt; $1,236M, calculo aritmetico, excedente de $7.17M</td>
+            </tr>
+            <tr style="--i:6">
+              <td><strong>VI. Convergencia de Defensas</strong></td>
+              <td class="num">1</td>
+              <td>Resumen de coincidencias entre S11 + S12 + S13 + S14</td>
+            </tr>
+            <tr style="--i:7">
+              <td><strong>VII. Solicitud de Archivo</strong></td>
+              <td class="num">1</td>
+              <td>Art. 16 Ley 610/2000, fundamentacion juridica</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td><strong>TOTAL</strong></td>
+              <td class="num"><strong>~11</strong></td>
+              <td><strong>Conciso, contundente, basado en evidencia de la propia CGR</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <h2 class="animate" style="--i:148">Ranking de Argumentos por Impacto</h2>
+
+    <div class="table-wrap animate" style="--i:149">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th class="num">#</th>
+              <th class="wide">Argumento</th>
+              <th>Fuerza</th>
+              <th>Fuente</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="--i:1">
+              <td class="num">1</td>
+              <td>$1,243M &gt; $1,236M (resarcimiento total)</td>
+              <td><span class="status status--vigente">Alta</span></td>
+              <td>Conciliacion + V2</td>
+            </tr>
+            <tr style="--i:2">
+              <td class="num">2</td>
+              <td>V2 reduce dano a 15% del Cto 774</td>
+              <td><span class="status status--vigente">Alta</span></td>
+              <td>OF0224-V2</td>
+            </tr>
+            <tr style="--i:3">
+              <td class="num">3</td>
+              <td>Renuncia a intereses (~4 anos, base $2,661M)</td>
+              <td><span class="status status--vigente">Alta</span></td>
+              <td>Conciliacion</td>
+            </tr>
+            <tr style="--i:4">
+              <td class="num">4</td>
+              <td>ICCP/ICOCIV justifican aumentos (~23.73% acumulado)</td>
+              <td><span class="status status--parcial">Media-Alta</span></td>
+              <td>Boletines DANE</td>
+            </tr>
+            <tr style="--i:5">
+              <td class="num">5</td>
+              <td>57% son cambio de especificaciones ($4,605M)</td>
+              <td><span class="status status--parcial">Media-Alta</span></td>
+              <td>V2 Tabla 17</td>
+            </tr>
+            <tr style="--i:6">
+              <td class="num">6</td>
+              <td>144 obras funcionales (visita tecnica)</td>
+              <td><span class="status status--actualiza">Media</span></td>
+              <td>Acta Visita</td>
+            </tr>
+            <tr style="--i:7">
+              <td class="num">7</td>
+              <td>Convergencia de 4 lineas de defensa</td>
+              <td><span class="status status--actualiza">Media</span></td>
+              <td>S11&ndash;S14</td>
+            </tr>
+            <tr style="--i:8">
+              <td class="num">8</td>
+              <td>20 demandas laborales terminadas</td>
+              <td><span class="status status--actualiza">Media</span></td>
+              <td>Conciliacion</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Annexes list -->
+    <details class="args-group animate" style="--i:150">
+      <summary>Anexos Propuestos &mdash; Documentacion de Soporte <span class="args-count">17 docs</span></summary>
+      <div class="args-body" style="padding:16px 20px;">
+        <ol style="font-size:14px; line-height:1.8; padding-left:20px; color:var(--text-dim);">
+          <li>Informe Tecnico OF0224-V0 (Abr 2024)</li>
+          <li>Informe Tecnico OF0224-V1 (May 2024)</li>
+          <li>Informe Tecnico OF0224-V2 (Nov 2025)</li>
+          <li>Contrato de Obra No. 4600009284 de 2019</li>
+          <li>Contrato No. 4600015774 de 2023 (Cto 774)</li>
+          <li>Acta de Visita Tecnica (Feb-Mar 2024) &mdash; Anexo 1</li>
+          <li>Inventario de Fallas del Pavimento &mdash; Anexo 3</li>
+          <li>Boletin Tecnico ICCP Dic 2019 (DANE)</li>
+          <li>Boletin Tecnico ICCP Dic 2020 (DANE)</li>
+          <li>Boletin Tecnico ICCP Dic 2021 (DANE)</li>
+          <li>Boletin Tecnico ICOCIV Dic 2022 (DANE)</li>
+          <li>Respuesta de la Aseguradora (Seguros Generales Suramericana)</li>
+          <li>Respuesta del CSVH (Consorcio SH)</li>
+          <li>Respuesta de la Interventoria (Consorcio CYC Antioquia)</li>
+          <li>Auto de vinculacion CGR</li>
+          <li><strong>Acuerdo Conciliatorio SIF 2025</strong></li>
+          <li><strong>Acta del Comite de Conciliacion &mdash; Gobernacion de Antioquia (20 Nov 2025)</strong></li>
+        </ol>
+      </div>
+    </details>
+
+    <!-- Estructura propuesta -->
+    <h2 class="animate" style="--i:151">Estructura Propuesta del Documento Formal</h2>
+    <div class="callout animate" style="--i:152; border-left-color: var(--blue);">
+      <strong>Estrategia narrativa:</strong> El documento se construye como un embudo: empieza con el universo del dano alegado ($23,202M), muestra como la propia CGR lo redujo a $1,236M, y remata con la evidencia de que ese monto ya fue recuperado con excedente. Cada seccion refuerza la siguiente, cerrando con la solicitud de archivo fundamentada en el Art. 16 de la Ley 610/2000.
+    </div>
+    <ol class="steps-list">
+      <li class="animate" style="--i:153"><strong>Encabezado y contexto</strong> <small>Identificacion procesal, referencia a OF0224-V2, objeto del pronunciamiento</small></li>
+      <li class="animate" style="--i:154"><strong>Evolucion del dano</strong> <small>Tabla comparativa V0 &rarr; V1 &rarr; V2 con reduccion del 94.7%. Grafico de barras.</small></li>
+      <li class="animate" style="--i:155"><strong>Analisis tecnico de la V2</strong> <small>Descomposicion Tabla 17: componentes H, F, I, C. Solo 15% comparable.</small></li>
+      <li class="animate" style="--i:156"><strong>Acuerdo conciliatorio SIF 2025</strong> <small>$520M indemnizacion + $723M clausula penal = $1,243M. Renuncia a intereses. 20 demandas terminadas.</small></li>
+      <li class="animate" style="--i:157"><strong>Argumento central: resarcimiento total</strong> <small>$1,243M &gt; $1,236M. Excedente +$7.17M. Calculo aritmetico irrefutable.</small></li>
+      <li class="animate" style="--i:158"><strong>Convergencia de defensas</strong> <small>4 lineas de defensa independientes llegan a la misma conclusion: no hay detrimento.</small></li>
+      <li class="animate" style="--i:159"><strong>Solicitud de archivo</strong> <small>Art. 16, Ley 610/2000. Fundamentacion juridica. Solicitud formal de archivo del expediente.</small></li>
+    </ol>
+
 
   </div><!-- /main -->
 </div><!-- /wrap -->
